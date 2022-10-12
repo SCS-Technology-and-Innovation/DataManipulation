@@ -14,10 +14,6 @@ tqr = tqrfile.parse(tqrfile.sheet_names[0])
 stopwords = set('in with experience cutting edge and the field related tools or a b of c such computer industry making as software'.split())
 
 courses = dict()
-degree = None
-experience = None
-pending = False
-coursecode = None
 keep = False
 candidatecode = ''
 for index, row in tqr.iterrows():
