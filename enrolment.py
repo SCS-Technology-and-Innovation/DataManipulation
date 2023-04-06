@@ -25,13 +25,14 @@ plt.legend(bbox_to_anchor = (1.05, 1), loc = 'upper right', borderaxespad = 0)
 
 covid = dt.datetime(2020, 3, 1)
 scaleai = dt.datetime(2020, 4, 15)
-pratic = dt.datetime(2021, 1, 1) # guess
+pratic = dt.datetime(2021, 6, 1) # credit
+pratic2 = dt.datetime(2022, 6, 1) # non-credit
 present = dt.datetime(2023, 1, 1)
 future = dt.datetime(2023, 6, 1)
 past = dt.datetime(2015, 1, 1)
 
-roffset = dt.timedelta(days = 10)
-loffset = dt.timedelta(days = 60)
+roffset = dt.timedelta(days = 12)
+loffset = dt.timedelta(days = 65)
 
 plt.axvline(x = covid, color = 'pink', alpha = 0.5, linewidth = 4)
 plt.text(covid - loffset, 300, 'Start of COVID-19', rotation = 90)
@@ -40,7 +41,10 @@ plt.axvline(x = scaleai, color = 'cyan', alpha = 0.5, linewidth = 4)
 plt.text(scaleai + roffset, 250, 'ScaleAI begins', rotation = -90)
 
 plt.axvline(x = pratic, color = 'purple', alpha = 0.5, linewidth = 4)
-plt.text(pratic + roffset, 200, 'PRATIC begins', rotation = -90)
+plt.text(pratic + roffset, 200, 'PRATIC for credit', rotation = -90)
+
+plt.axvline(x = pratic2, color = 'orange', alpha = 0.5, linewidth = 4)
+plt.text(pratic2 + roffset, 400, 'PRATIC for non-credit', rotation = -90)
 
 plt.axvline(x = present, color = 'gray', alpha = 0.5, linewidth = 10)
 plt.text(future, 400, 'Forecast', rotation = 0, fontsize = 24)
