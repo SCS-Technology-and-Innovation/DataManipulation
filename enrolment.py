@@ -27,8 +27,8 @@ covid = dt.datetime(2020, 3, 1)
 scaleai = dt.datetime(2020, 4, 15)
 pratic = dt.datetime(2021, 1, 1) # guess
 present = dt.datetime(2023, 1, 1)
-future = dt.datetime(2024, 6, 1)
-past = dt.datetime(2016, 1, 1)
+future = dt.datetime(2023, 6, 1)
+past = dt.datetime(2015, 1, 1)
 
 roffset = dt.timedelta(days = 10)
 loffset = dt.timedelta(days = 60)
@@ -43,7 +43,7 @@ plt.axvline(x = pratic, color = 'purple', alpha = 0.5, linewidth = 4)
 plt.text(pratic + roffset, 200, 'PRATIC begins', rotation = -90)
 
 plt.axvline(x = present, color = 'gray', alpha = 0.5, linewidth = 10)
-plt.text(future, 300, 'Forecast', rotation = 0, fontsize = 24)
+plt.text(future, 400, 'Forecast', rotation = 0, fontsize = 24)
 plt.text(past, 300, 'Past enrolment data', rotation = 0, fontsize = 24)
 
 plt.title('Technology & Innovation')
