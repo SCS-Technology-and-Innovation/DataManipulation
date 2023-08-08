@@ -30,8 +30,8 @@ covid = dt.datetime(2020, 3, 1)
 scaleai = dt.datetime(2020, 4, 15)
 pratic = dt.datetime(2021, 6, 1) # credit
 pratic2 = dt.datetime(2022, 6, 1) # non-credit
-present = dt.datetime(2023, 1, 1)
-future = dt.datetime(2023, 6, 1)
+present = dt.datetime(2023, 8, 1)
+future = present + dt.timedelta(days = 90)
 past = dt.datetime(2015, 1, 1)
 
 roffset = dt.timedelta(days = 12)
