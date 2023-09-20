@@ -3,7 +3,7 @@ import pandas as pd
 import datetime as dt
 import matplotlib.pyplot as plt
 
-data = pd.read_excel('old_data_new_cohorts.xlsx')
+data = pd.read_excel('old_data_new_cohorts.xlsx', sheet_name = 'F23')
 pr = data['Program']
 kind = data['Kind']
 data.fillna(0)
@@ -30,7 +30,7 @@ covid = dt.datetime(2020, 3, 1)
 scaleai = dt.datetime(2020, 4, 15)
 pratic = dt.datetime(2021, 6, 1) # credit
 pratic2 = dt.datetime(2022, 6, 1) # non-credit
-present = dt.datetime(2023, 8, 1)
+present = dt.datetime(2023, 9, 20) # NOW
 future = present + dt.timedelta(days = 90)
 past = dt.datetime(2015, 1, 1)
 
@@ -61,8 +61,8 @@ ba = dt.datetime(2026, 5, 1)
 cit = dt.datetime(2025, 5, 1)
 aai = dt.datetime(2025, 6, 1) 
 
-plt.axvline(x = ba, color = 'green', alpha = 0.5, linewidth = 3)
-plt.text(ba - loffset, 300, 'BA revised', rotation = 90, color = plan)
+#plt.axvline(x = ba, color = 'green', alpha = 0.5, linewidth = 3)
+#plt.text(ba - loffset, 300, 'BA revised', rotation = 90, color = plan)
 
 plt.axvline(x = cit, color = 'yellow', alpha = 0.5, linewidth = 3)
 plt.text(cit - loffset, 300, 'CIT modular', rotation = 90, color = plan)
