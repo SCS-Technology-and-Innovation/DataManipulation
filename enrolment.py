@@ -3,7 +3,8 @@ import pandas as pd
 import datetime as dt
 import matplotlib.pyplot as plt
 
-data = pd.read_excel('old_data_new_cohorts.xlsx', sheet_name = 'F23')
+# CHANGE THE SHEET NAME
+data = pd.read_excel('old_data_new_cohorts.xlsx', sheet_name = 'W24')
 pr = data['Program']
 kind = data['Kind']
 data.fillna(0)
@@ -30,7 +31,7 @@ covid = dt.datetime(2020, 3, 1)
 scaleai = dt.datetime(2020, 4, 15)
 pratic = dt.datetime(2021, 6, 1) # credit
 pratic2 = dt.datetime(2022, 6, 1) # non-credit
-present = dt.datetime(2023, 9, 20) # NOW
+present = dt.datetime(2024, 2, 26) # CHANGE THE DATE OF NOW
 future = present + dt.timedelta(days = 90)
 past = dt.datetime(2015, 1, 1)
 
@@ -53,24 +54,21 @@ plt.axvline(x = pratic2, color = 'orange', alpha = 0.5, linewidth = 4)
 plt.text(pratic2 - loffset, 300, 'PRATIC non-credit', rotation = 90, color = fact)
 
 plt.axvline(x = present, color = 'gray', alpha = 0.5, linewidth = 16)
-plt.text(future, 400, 'Forecast', rotation = 0, fontsize = 16)
-plt.text(present - 3 * roffset, 400, 'NOW', rotation = 90, fontsize = 12)
+plt.text(future, 400, 'Forecast', rotation = 0, fontsize = 14)
+plt.text(present - 3 * roffset, 340, 'NOW', rotation = 90, fontsize = 12)
 plt.text(past, 300, 'Past enrolment data', rotation = 0, fontsize = 20)
 
 ba = dt.datetime(2026, 5, 1)
-cit = dt.datetime(2025, 5, 1)
-aai = dt.datetime(2025, 6, 1) 
-
-#plt.axvline(x = ba, color = 'green', alpha = 0.5, linewidth = 3)
-#plt.text(ba - loffset, 300, 'BA revised', rotation = 90, color = plan)
+cit = dt.datetime(2026, 9, 1)
+aai = dt.datetime(2025, 9, 1) 
 
 plt.axvline(x = cit, color = 'yellow', alpha = 0.5, linewidth = 3)
-plt.text(cit - loffset, 300, 'CIT modular', rotation = 90, color = plan)
+plt.text(cit - loffset, 340, 'Undergrad revised', rotation = 90, color = plan)
 
 plt.axvline(x = aai, color = 'green', alpha = 0.5, linewidth = 3)
-plt.text(aai + roffset, 370, 'AAI online', rotation = -90, color = plan)
+plt.text(aai + roffset, 340, 'PDCs revised', rotation = -90, color = plan)
 
-plt.title('Technology & Innovation', fontsize = 40)
+plt.title('Technology & Innovation', fontsize = 30)
 plt.xlabel('Term')
 plt.ylabel('Registrations')
 
